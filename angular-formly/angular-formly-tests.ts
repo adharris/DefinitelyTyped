@@ -47,7 +47,11 @@ class AppController {
 					required: true,
 					label: 'First Name',
 					foo: 'hi'
-				}
+				},
+				extras: {
+					validateOnModelChange: false,
+					skipNgModelAttrsManipulator: false,
+				},
 			},
 			{
 				key: 'email',

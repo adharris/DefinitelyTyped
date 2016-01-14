@@ -212,6 +212,26 @@ declare module AngularFormly {
 			[key: string]: string | IExpressionFunction | IValidator;
 		};
 
+		/**
+		* This object holds a few extra configuration options that are not commonly used.
+		*
+		* see http://docs.angular-formly.com/docs/field-configuration-object#extras-object
+		*/
+		extras?: {
+
+			/**
+			* This will cause the validation to run whenever anything in the model or formState changes. This
+			* is useful in a case where the value of one field determines the validity of another.
+			*/
+			validateOnModelChange?: boolean;
+
+			/**
+			* If, for some reason, you want to have the built-in ngModelAttrsManipulator skip over a template,
+			* this is the way to do it.
+			*/
+			skipNgModelAttrsManipulator?: boolean;
+
+		};
 
 		/**
 		 * Uses ng-if. Whether to hide the field. Defaults to false. If you wish this to be conditional, use
